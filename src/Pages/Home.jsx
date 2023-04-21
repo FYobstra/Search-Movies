@@ -25,8 +25,8 @@ export default function Home() {
           Sitio realizado con React, Tailwind y Framer Motion
         </p>
       </motion.header>
-      <section>
-        <GridMovies movies={movies.results?.slice(0, 12)} />
+      <section className="w-full h-full">
+        <GridMovies category={"Mas popular"} movies={movies.results?.slice(0, 12)} />
       </section>
     </main>
   );
