@@ -10,8 +10,6 @@ export default function Home() {
     fetchAllMovies().then((res) => setMovies(res));
   }, []);
 
-  console.log(movies)
-
   return (
     <main className="w-full flex flex-col gap-20 py-16 relative">
       <motion.header
@@ -28,7 +26,7 @@ export default function Home() {
         </p>
       </motion.header>
       <section>
-        <GridMovies movies={movies.results} />
+        <GridMovies movies={movies.results?.slice(0, 12)} />
       </section>
     </main>
   );

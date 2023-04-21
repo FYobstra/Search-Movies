@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { TbMovie } from "react-icons/tb";
 
 export default function CardMovie({ img, title, year, id }) {
   return (
@@ -11,6 +12,10 @@ export default function CardMovie({ img, title, year, id }) {
         />
         <h4 className="dark:text-gray-400">{title}</h4>
         <p className="dark:text-gray-400">{year}</p>
+        <div className="flex items-center gap-2 text-lg">
+          <TbMovie className="dark:text-gray-400" />
+          <p className="dark:text-gray-400">Pelicula</p>
+        </div>
       </div>
     </Link>
   );

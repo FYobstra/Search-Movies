@@ -5,7 +5,7 @@ export default function MainWrapper({ component }) {
   return (
     <div className="w-full dark:bg-black bg-white">
       <Navbar />
-      {component}
+      <div className="pt-10">{component}</div>
       <Footer />
     </div>
   );
