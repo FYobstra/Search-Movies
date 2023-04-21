@@ -82,13 +82,15 @@ export default function Navbar() {
             animate={{ width: "100%", opacity: 1 }}
             transition={{ duration: 0.3 }}
             exit="exit"
-            className="w-full bg-white-bg dark:bg-black-bg h-[100vh] text-gray-500 flex flex-col gap-5 overflow-hidden pt-10 pl-6"
+            className="w-full bg-white-bg dark:bg-black-bg h-[100vh] text-gray-500 flex flex-col gap-10 overflow-hidden text-center pt-24 px-6"
           >
-            <NavLink to={'/catalogue'} className="dark:hover:text-white hover:text-gray-400">Catalogo</NavLink>
-            <NavLink to="https://github.com/FYobstra" target="_blank" className="dark:hover:text-white hover:text-gray-400">Github</NavLink>
-            <NavLink to={"/register"} className="text-color-primary md:hidden">
+            <NavLink to={'/catalogue'} className="dark:hover:text-white hover:text-gray-400 text-xl">Catalogo</NavLink>
+            <NavLink to="https://github.com/FYobstra" target="_blank" className="dark:hover:text-white hover:text-gray-400 text-xl">Github</NavLink>
+            <NavLink to={"/register"}>
+            <button className="w-full bg-color-primary-transparent border-none rounded-lg py-3 text-color-primary">
               Registrate
-            </NavLink>
+            </button>
+          </NavLink>
           </motion.div>
         )}
       </AnimatePresence>
