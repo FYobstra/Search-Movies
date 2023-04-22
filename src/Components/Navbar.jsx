@@ -37,7 +37,7 @@ export default function Navbar() {
         alt=""
         className="absolute w-[130rem]"
       />
-      <div className="w-full flex justify-between items-center px-4 lg:px-10 py-4 backdrop-blur-md dark:bg-[#1118276b] fixed z-20">
+      <div className="w-full flex justify-between items-center px-4 lg:px-10 py-4 backdrop-blur-md dark:bg-[#1118276b] sticky z-20">
         <div className="flex items-center gap-3">
           {isOpen ? (
             <IoCloseOutline

@@ -29,7 +29,7 @@ export default function MovieDetails() {
           animate={{ y: 25, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-full flex flex-col lg:flex-row justify-between items-center p-10 lg:p-20 gap-10 relative">
+          <div className="w-full flex flex-col min-h-[70vh] lg:flex-row justify-between items-center p-10 lg:p-20 gap-10 relative">
             <div className="w-full lg:w-1/2">
               <img
                 src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}

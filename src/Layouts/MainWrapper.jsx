@@ -10,7 +10,7 @@ export default function MainWrapper({ component }) {
   }, [location]);
 
   return (
-    <div className="w-full h-full flex flex-col gap-10 dark:bg-black bg-white">
+    <div className="w-full min-h-[100vh] flex flex-col gap-10 dark:bg-black bg-white">
       <Navbar />
       <div>{component}</div>
       <Footer />

@@ -2,13 +2,22 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fetchAllMovies } from "../Services/movies";
 import { GridMovies } from "../Layouts";
+import { AiOutlineSearch } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
+  const Navigate = useNavigate()
 
   useEffect(() => {
     fetchAllMovies().then((res) => setMovies(res));
   }, []);
+
+  function searchMovie(e) {
+    if(e.key === "Enter" ) {
+      Navigate(`/movie-search/${encodeURIComponent(e.target.value)}`)
+    }
+  }
 
   return (
     <main className="w-full flex flex-col gap-20 py-16 relative">
@@ -24,9 +33,16 @@ export default function Home() {
         <p className="dark:text-white text-gray-800 text-xs md:text-base">
           Sitio realizado con React, Tailwind y Framer Motion
         </p>
+        <div className="w-[60%] flex items-center max-w-xl rounded-md border dark:border-gray-600 bg-gray-100 dark:bg-gray-900 pl-2 py-1">
+          <AiOutlineSearch className="dark:text-gray-400" />
+          <input type="search" onKeyDown={(e) => searchMovie(e)} placeholder="Busca tu pelicula..." className="w-full px-2 bg-transparent dark:text-gray-400 outline-none" />
+        </div>
       </motion.header>
       <section className="w-full h-full">
-        <GridMovies category={"Mas popular"} movies={movies.results?.slice(0, 12)} />
+        <GridMovies
+          category={"Mas popular"}
+          movies={movies.results?.slice(0, 12)}
+        />
       </section>
     </main>
   );

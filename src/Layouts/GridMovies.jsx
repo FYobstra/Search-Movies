@@ -12,7 +12,7 @@ export default function GridMovies({ movies, category }) {
         <div className="w-full lg:px-0 md:max-w-4xl xl:max-w-6xl flex flex-col">
           <div className="w-full px-10 lg:px-0 md:max-w-4xl xl:max-w-6xl flex items-center justify-between">
             <p className="dark:text-white lg:text-lg">{category}</p>
-            {location.pathname !== "/catalogue" && (
+            {location.pathname === "/" && (
               <Link
                 to={"/catalogue"}
                 className="dark:text-white lg:text-lg cursor-pointer hover:underline"

@@ -23,3 +23,11 @@ export const fetchSimilarMovies = async (id) => {
   const data = await response.json();
   return data;
 };
+
+export const fetchSearchMovie = async (title) => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=es&query=${title}&page=1&include_adult=false`
+  );
+  const data = await response.json();
+  return data;
+};
