@@ -68,7 +68,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="hidden lg:block dark:hover:text-white hover:text-gray-400"
             >
-              Catalogo
+              Catálogo
             </NavLink>
             <NavLink
               to="https://github.com/FYobstra"
@@ -99,7 +99,7 @@ export default function Navbar() {
               animate={{ width: "100%", opacity: 1 }}
               transition={{ duration: 0.3 }}
               exit="exit"
-              className="w-full sticky top-0 z-10 bg-white-bg dark:bg-black-bg h-[100vh] overflow-hidden text-gray-500 flex flex-col gap-10 text-center pt-24 px-6"
+              className="w-full sti top-0 z-10 bg-white-bg dark:bg-black-bg h-[100vh] overflow-hidden text-gray-500 flex flex-col gap-10 text-center pt-24 px-6"
             >
               <NavLink
                 to={"/"}
@@ -113,7 +113,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="dark:hover:text-white hover:text-gray-400 text-xl"
               >
-                Catalogo
+                Catálogo
               </NavLink>
               <NavLink
                 to="https://github.com/FYobstra"

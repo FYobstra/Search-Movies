@@ -14,7 +14,7 @@ export default function CardMovie({ img, title, year, id, recommended }) {
         <p className="dark:text-gray-400">{year}</p>
         <div className="flex items-center gap-2 text-lg">
           <TbMovie className="dark:text-gray-400" />
-          <p className="dark:text-gray-400">Pelicula</p>
+          <p className="dark:text-gray-400">Película</p>
         </div>
       </div>
     </Link>

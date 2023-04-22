@@ -28,19 +28,19 @@ export default function Home() {
         className="w-full flex flex-col justify-center items-center gap-5"
       >
         <h1 className="dark:text-white text-gray-800 text-3xl md:text-4xl lg:text-6xl font-bold">
-          Lista de peliculas
+          Lista de películas
         </h1>
         <p className="dark:text-white text-gray-800 text-xs md:text-base">
           Sitio realizado con React, Tailwind y Framer Motion
         </p>
         <div className="w-[60%] flex items-center max-w-xl rounded-md border dark:border-gray-600 bg-gray-100 dark:bg-gray-900 pl-2 py-1">
           <AiOutlineSearch className="dark:text-gray-400" />
-          <input type="search" onKeyDown={(e) => searchMovie(e)} placeholder="Busca tu pelicula..." className="w-full px-2 bg-transparent dark:text-gray-400 outline-none" />
+          <input type="search" onKeyDown={(e) => searchMovie(e)} placeholder="Buscá tu película..." className="w-full px-2 bg-transparent dark:text-gray-400 outline-none" />
         </div>
       </motion.header>
       <section className="w-full h-full">
         <GridMovies
-          category={"Mas popular"}
+          category={"Más popular"}
           movies={movies.results?.slice(0, 12)}
         />
       </section>

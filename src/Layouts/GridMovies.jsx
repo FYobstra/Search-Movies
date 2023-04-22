@@ -17,7 +17,7 @@ export default function GridMovies({ movies, category }) {
                 to={"/catalogue"}
                 className="dark:text-white lg:text-lg cursor-pointer hover:underline"
               >
-                Ver mas
+                Ver más
               </Link>
             )}
           </div>

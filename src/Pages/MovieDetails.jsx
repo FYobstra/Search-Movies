@@ -56,7 +56,7 @@ export default function MovieDetails() {
               </p>
               <div className="w-full flex flex-col items-start gap-4 text-sm">
                 <p className="dark:text-white text-black font-semibold">
-                  Puntuacion: {"⭐️  ".repeat(movie.vote_average / 2)}
+                  Puntuación: {"⭐️  ".repeat(movie.vote_average / 2)}
                 </p>
                 <div className="flex flex-col items-start md:items-center md:flex-row gap-3">
                   <p className="dark:text-white text-black font-semibold">
