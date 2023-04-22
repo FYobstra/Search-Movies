@@ -12,7 +12,7 @@ export default function MainWrapper({ component }) {
   return (
     <div className="w-full min-h-[100vh] flex flex-col gap-10 dark:bg-black bg-white">
       <Navbar />
-      <div>{component}</div>
+      <div className="pt-10">{component}</div>
       <Footer />
     </div>
   );

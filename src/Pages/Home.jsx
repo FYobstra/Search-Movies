@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   return (
-    <main className="w-full flex flex-col gap-20 py-16 relative">
+    <main className="w-full flex flex-col gap-20 pb-16 relative">
       <motion.header
         initial={{ y: 0, opacity: 0 }}
         animate={{ y: 25, opacity: 1 }}
