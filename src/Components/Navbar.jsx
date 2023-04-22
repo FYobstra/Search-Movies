@@ -88,11 +88,6 @@ export default function Navbar() {
               onClick={() => changeTheme()}
             />
           )}
-          <NavLink to={"/register"}>
-            <button className="bg-color-primary-transparent border-none rounded-lg py-2 hidden md:block px-3 text-color-primary">
-              Registrate
-            </button>
-          </NavLink>
         </div>
       </div>
       <AnimatePresence>
@@ -126,11 +121,6 @@ export default function Navbar() {
               className="dark:hover:text-white hover:text-gray-400 text-xl"
             >
               Github
-            </NavLink>
-            <NavLink to={"/register"} onClick={() => setIsOpen(false)}>
-              <button className="w-full bg-color-primary-transparent border-none rounded-lg py-3 text-color-primary">
-                Registrate
-              </button>
             </NavLink>
           </motion.div>
         )}
