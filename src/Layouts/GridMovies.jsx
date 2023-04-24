@@ -31,7 +31,7 @@ export default function GridMovies({ movies, category }) {
               <CardMovie
                 key={index}
                 id={data.id}
-                img={data.poster_path}
+                img={data.poster_path ? data.poster_path : null}
                 title={data.title}
                 year={data.release_date.split("-")[0]}
               />

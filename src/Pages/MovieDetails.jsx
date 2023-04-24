@@ -7,23 +7,28 @@ import { motion } from "framer-motion";
 export default function MovieDetails() {
   const [movie, setMovie] = useState([]);
   const [similarMovie, setSimilarMovie] = useState([]);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setLoading(true);
     fetchMovieDetails(location.pathname.split("/")[2]).then((res) =>
       setMovie(res)
     );
     fetchSimilarMovies(location.pathname.split("/")[2]).then((res) =>
       setSimilarMovie(res.results?.slice(0, 4))
     );
+    setLoading(false);
   }, [location]);
-
-  console.log(movie);
 
   return (
     <>
-      {movie && (
+      {loading ? (
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+        </div>
+      ) : (
         <motion.div
           initial={{ y: 0, opacity: 0 }}
           animate={{ y: 25, opacity: 1 }}
@@ -32,7 +37,8 @@ export default function MovieDetails() {
           <div className="w-full flex flex-col min-h-[70vh] lg:flex-row justify-between items-center p-10 lg:p-20 gap-10 relative">
             <div className="w-full lg:w-1/2">
               <img
-                src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                onLoad={() => setLoading(false)}
+                src={movie.backdrop_path ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}` : "https://via.placeholder.com/640x360.png?text=no+img"}
                 alt={movie.title}
                 className="rounded-lg"
               />

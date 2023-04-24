@@ -6,7 +6,7 @@ export default function CardMovie({ img, title, year, id, recommended }) {
     <Link to={`/movie-details/${id}`}>
       <div className="w-fit flex flex-col gap-1 items-center hover:scale-105 transition-all duration-200 ease-linear cursor-pointer">
         <img
-          src={`https://image.tmdb.org/t/p/w342${img}`}
+          src={img ? `https://image.tmdb.org/t/p/w500${img}` : "https://via.placeholder.com/500x750?text=no-img"}
           alt=""
           className={`${recommended ? "w-1/2" : "w-full"} rounded-md`}
         />
