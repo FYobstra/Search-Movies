@@ -47,7 +47,7 @@ export default function MovieDetails() {
               <h1 className="dark:text-white text-black text-2xl md:text-3xl xl:text-4xl font-bold">
                 {movie.title}
               </h1>
-              <div className="flex items-start md:items-center md:flex-row gap-3">
+              <div className="flex flex-wrap items-start md:items-center md:flex-row gap-3">
                 {movie.genres?.map((data, index) => (
                   <p
                     key={index}
